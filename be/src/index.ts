@@ -52,7 +52,7 @@ wss.on("connection",(socket)=>{
             }
        
             for (let i = 0; i < allSockets.length; i++) {
-                if (allSockets[i]?.room==currentRoom) {
+                if (allSockets[i]?.room==currentRoom && allSockets[i]?.socket !== socket) {
                     allSockets[i]?.socket.send(parseMessage.payload.message)
                 }
                 

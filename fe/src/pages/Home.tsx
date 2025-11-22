@@ -1,5 +1,5 @@
 import JoinPage from "./JoinPage";
-import { useZustStore } from "./store";
+import { useZustStore } from "../components/store/store";
 
 export const Home =()=>{
 const style = "bg-blue-800 p-1  cursor-pointer  pl-1.5 rounded";
@@ -9,7 +9,7 @@ function joinRoom(){
 open()
 }
     return(
-    <>
+    <div className={` flex justify-center items-center`}>
     <JoinPage/>
         <div className={`text-white h-[300px] w-[500px] rounded-md border text-center p-2 border-orange-50`}> 
             <h1 className="mb-3"> What you want to try ? </h1>
@@ -18,6 +18,6 @@ open()
             <button className={`${style}`} > Create Room </button>
         </div>
         
-    </>
+    </div>
 )
 }
